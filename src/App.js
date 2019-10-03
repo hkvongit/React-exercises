@@ -1,11 +1,21 @@
 import React from 'react';
-import Counter from './components/Counter'
+import propTypes from 'prop-types'
+import ParentComponent from './components/ParentComponent'
+const Test = (props) =>{
+  return (
+    <h1>{props.str}</h1>
+  )
+}
+
+Test.propTypes ={
+  str:propTypes.string
+}
 
 function App() {
   return (
     <div className="App">
-      App
-      <Counter/>
+      <Test str="hey dude"/>
+      <ParentComponent / >
     </div>
   );
 }
